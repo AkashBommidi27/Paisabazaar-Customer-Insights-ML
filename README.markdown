@@ -155,6 +155,6 @@ For questions or collaboration opportunities, reach out to:
 | Platform | Details |
 |----------|---------|
 | GitHub | [AkashBommidi27](https://github.com/AkashBommidi27) |
-| Email | [Your Email Addres](bommidiakash48@gmail.com) |
+| Email | [Email Addres](bommidiakash48@gmail.com) |
 
 Thank you for exploring this project. Contributions and feedback are welcome.
