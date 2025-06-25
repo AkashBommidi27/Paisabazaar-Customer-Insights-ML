@@ -1,26 +1,67 @@
 Paisabazaar Customer Insights & Risk Management
-Project Overview
-This project focuses on leveraging machine learning and financial analytics to derive actionable insights from customer and policy data at Paisabazaar, a leading financial services platform. The objective is to enhance customer engagement, optimize risk management, and drive business growth through data-driven strategies. Key tasks include customer segmentation, credit score prediction, loan risk assessment, churn risk detection, and identifying cross-selling opportunities.
-The dataset, comprising customer demographics, financial behavior, and credit metrics, serves as the foundation for advanced analytics and predictive modeling. The results provide strategic recommendations for personalized marketing, loan approvals, and churn prevention.
-🔗 Dataset: Sourced from a Google Drive link (anonymized customer data).🔗 Notebook: Paisabazaar_Project.ipynb🔗 Results: Saved in Result_df.csv
+Overview
+This project leverages machine learning and financial analytics to derive actionable insights from customer and policy data at Paisabazaar, a leading financial services platform. The goal is to enhance customer engagement, optimize risk management, and drive business growth through data-driven strategies. Key tasks include customer segmentation, credit score prediction, loan risk assessment, churn risk detection, and identifying cross-selling opportunities.
+The dataset includes customer demographics, financial behavior, and credit metrics, forming the foundation for advanced analytics and predictive modeling. The results provide strategic recommendations for personalized marketing, loan approvals, and churn prevention.
+
+
+
+Key Details
+
+
+
+
+Dataset
+Anonymized customer data sourced from Google Drive
+
+
+Notebook
+Paisabazaar_Project.ipynb
+
+
+Results
+Saved in Result_df.csv
+
+
+GitHub
+AkashBommidi27/Paisabazaar-Customer-Insights-ML
+
+
 
 Project Objectives
 
-Customer Behavior Analysis: Understand customer preferences and financial patterns.
-Customer Segmentation: Group customers for targeted marketing and personalized offers.
-Credit Score Prediction: Develop a model to classify customers' creditworthiness.
-Loan Risk Assessment: Identify high-risk borrowers to minimize defaults.
-Churn Risk Detection: Flag customers at risk of disengagement or default.
-Cross-Selling Opportunities: Recommend relevant financial products based on customer profiles.
+Understand Customer Behavior: Analyze preferences and financial patterns.
+Segment Customers: Group customers for targeted marketing and personalized offers.
+Predict Credit Scores: Develop a model to classify creditworthiness.
+Assess Loan Risk: Identify high-risk borrowers to minimize defaults.
+Detect Churn Risk: Flag customers at risk of disengagement or default.
+Identify Cross-Selling Opportunities: Recommend relevant financial products based on customer profiles.
 
 
 Dataset Description
-The dataset contains rich customer-level information, including:
+The dataset contains comprehensive customer-level information, including:
 
-Demographics: Age, occupation, annual income, monthly in-hand salary.
-Financial Metrics: Number of bank accounts, credit cards, loans, outstanding debt, credit utilization ratio.
-Credit Behavior: Payment delays, credit inquiries, credit mix, payment behavior.
-Target Variable: Credit score (Good, Standard, Poor).
+
+
+Category
+Features
+
+
+
+Demographics
+Age, Occupation, Annual Income, Monthly Inhand Salary
+
+
+Financial Metrics
+Number of Bank Accounts, Credit Cards, Loans, Outstanding Debt, Credit Utilization Ratio
+
+
+Credit Behavior
+Payment Delays, Credit Inquiries, Credit Mix, Payment Behavior
+
+
+Target Variable
+Credit Score (Good, Standard, Poor)
+
 
 Key Features:
 
@@ -35,8 +76,8 @@ For a detailed feature explanation, refer to the notebook.
 Methodology
 1. Data Preprocessing
 
-Libraries Used: Pandas, NumPy for data manipulation; Matplotlib, Seaborn for visualization.
-Preprocessing Steps:
+Libraries: pandas, numpy for data manipulation; matplotlib, seaborn for visualization.
+Steps:
 Handled missing values and outliers.
 Encoded categorical variables using LabelEncoder.
 Standardized numerical features with StandardScaler.
@@ -47,13 +88,13 @@ Split data into training and testing sets using train_test_split.
 2. Exploratory Data Analysis (EDA)
 
 Analyzed distributions of key financial metrics.
-Identified correlations between features like income, debt, and credit score.
+Identified correlations between income, debt, and credit score.
 Visualized payment behavior and credit utilization patterns.
 
 3. Machine Learning Models
 
 Credit Score Prediction:
-Model: XGBClassifier with SMOTE for handling class imbalance.
+Model: XGBClassifier with SMOTE for class imbalance.
 Feature Selection: Optimized using SHAP values.
 Evaluation Metrics: Accuracy, classification report, confusion matrix.
 
@@ -72,37 +113,50 @@ Churn Risk Score: Weighted score based on delay metrics and cash flow.
 
 
 Results
-1. Credit Score Prediction
 
-Accuracy: ~84% (post-SHAP optimization).
-Key Predictors: Total_EMI_per_month, Outstanding_Debt, Monthly_Balance, Delay_from_due_date, Amount_invested_monthly.
-Impact: Enables automated credit evaluations and faster loan approvals.
 
-2. Customer Segmentation
 
-Clusters:
+Task
+Key Metrics
+Outcome
+
+
+
+Credit Score Prediction
+~84% accuracy (post-SHAP optimization)
+Automated creditworthiness evaluation for faster loan approvals.
+
+
+Customer Segmentation
+4 clusters: Premium, Balanced, Emerging, At-Risk
+Tailored marketing strategies for each segment.
+
+
+Loan Risk Assessment
+Flagged high-risk borrowers
+Risk-adjusted loan terms to reduce non-performing assets (NPAs).
+
+
+Churn Risk Prediction
+Top 25% flagged as high-risk (Churn_Risk_Flag = 1)
+Proactive retention strategies for at-risk customers.
+
+
+Key Insights
+
+Credit Score Predictors: Total_EMI_per_month, Outstanding_Debt, Monthly_Balance, Delay_from_due_date, Amount_invested_monthly.
+Segmentation Profiles:
 Premium: High-income, disciplined borrowers.
-Balanced: Stable earners with moderate financial activity.
-Emerging: Low-income but consistent customers.
+Balanced: Stable earners with moderate activity.
+Emerging: Low-income, consistent customers.
 At-Risk: Financially vulnerable with high debt or delays.
 
 
-Strategic Use: Tailored marketing campaigns for each segment.
-
-3. Loan Risk Assessment
-
-Identified high-risk borrowers based on repayment history and debt levels.
-Outcome: Supports risk-adjusted loan terms to reduce non-performing assets (NP 2).
-
-4. Churn Risk Prediction
-
-Flagged top 25% of customers as high-risk (Churn_Risk_Flag = 1).
-Overlap: Strong correlation with At-Risk and low-end Balanced segments.
-Outcome: Proactive retention strategies for at-risk customers.
+Churn Overlap: Strong correlation between At-Risk and low-end Balanced segments.
 
 
 Business Strategies
-This project delivers actionable strategies aligned with Paisabazaar’s goals:
+The project delivers actionable strategies to align with Paisabazaar’s mission:
 
 
 
@@ -118,7 +172,7 @@ Upsell high-value financial services
 
 
 Balanced
-Insurance, low-risk investments funds
+Insurance, low-risk investments
 Cross-promote smart bundling offers
 
 
@@ -132,26 +186,38 @@ Credit repair, advisory plans
 Offer financial literacy programs
 
 
-Key Impacts
+Business Impact
 
-Personalized Marketing: Tailored product recommendations improve conversion rates and customer loyalty.
+Personalized Marketing: Tailored recommendations boost conversion and loyalty.
 Risk Mitigation: Automated credit scoring reduces defaults and enhances portfolio health.
-Customer Retention: Proactive churn flagging flagging minimizes customer drop-off.
-Scalable Growth: Data-driven insights strategies support Paisabazaar’s mission of inclusive financial services.
+Customer Retention: Proactive churn flagging minimizes drop-off.
+Scalable Growth: Data-driven insights support inclusive financial services at scale.
 
 
 Tools & Technologies
 
-Programming Language: Python
-Libraries:
-Data Manipulation: pandas, numpy
-Visualization: matplotlib, seaborn
-Machine Learning: scikit-learn, xgboost
-Preprocessing: sklearn.preprocessing, sklearn.preprocessing, imbalanced-learn
 
 
-Environment: Jupyter Notebook (Google Colab with Colab)
-Data Source: Google Drive (via gdown)
+Category
+Tools
+
+
+
+Programming Language
+Python
+
+
+Libraries
+pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost, imbalanced-learn
+
+
+Environment
+Jupyter Notebook (Google Colab with GPU support)
+
+
+Data Source
+Google Drive (via gdown)
+
 
 
 How to Run the Project
@@ -166,27 +232,27 @@ pip install pandas numpy scikit-learn xgboost seaborn matplotlib gdown imbalance
 
 Download the Dataset:
 
-The notebook automatically fetches the dataset from Google Drive using gdown.
+The notebook fetches the dataset using gdown.
 Alternatively, place paisabazaar_dataset.csv in the project directory.
 
 
 Run the Notebook:
 
 Open Paisabazaar_Project.ipynb in Jupyter Notebook or Google Colab.
-Execute cells sequentially to reproduce the analysis and results.
+Execute cells sequentially to reproduce analysis and results.
 
 
 View Results:
 
-Outputs are saved in Result_df.csv.
-Visualizations and model metrics are displayed in the notebook.
+Outputs saved in Result_df.csv.
+Visualizations and metrics displayed in the notebook.
 
 
 
 
 Future Enhancements
 
-Advanced Models: Experiment with deep learning (e.g., neural networks) for credit score prediction.
+Advanced Models: Explore deep learning (e.g., neural networks) for improved prediction.
 Real-Time Analytics: Deploy models as APIs for live customer scoring.
 Feature Engineering: Incorporate external data (e.g., market trends) for richer insights.
 Explainability: Enhance SHAP-based feature importance for customer-facing transparency.
@@ -195,8 +261,20 @@ Explainability: Enhance SHAP-based feature importance for customer-facing transp
 Contact
 For questions or collaboration opportunities, reach out to:
 
-GitHub: AkashBommidi27
-Email: [Your Email Address] (please add your email here)
 
 
-Thank you for exploring this project! Your feedback and contributions are welcome.
+Platform
+Details
+
+
+
+GitHub
+AkashBommidi27
+
+
+Email
+[Your Email Address] (please add your email here)
+
+
+
+Thank you for exploring this project! Contributions and feedback are welcome.
