@@ -10,7 +10,7 @@ Key Details:
 
 | Item | Description |
 |------|-------------|
-| Dataset | Anonymized customer data sourced from Google Drive |
+| Dataset | [Anonymized customer data sourced from Google Drive](https://drive.google.com/file/d/1tpaMVcgegVvm5_zJUyWnct3DlG7EtDo7/view?usp=sharing) |
 | Notebook | [Paisabazaar_Project.ipynb](Paisabazaar_Project.ipynb) |
 | Results | Saved in [Result_df.csv](Result_df.csv) |
 | GitHub | [AkashBommidi27/Paisabazaar-Customer-Insights-ML](https://github.com/AkashBommidi27/Paisabazaar-Customer-Insights-ML) |
